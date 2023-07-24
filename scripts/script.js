@@ -28,7 +28,7 @@ const texts = [
   document.addEventListener("DOMContentLoaded", function() {
     const myButton = document.getElementById("btnCntct");
   
-    const linkToOpen = ".//includes/contact.html";
+    const linkToOpen = "./includes/contact.html";
   
     myButton.addEventListener("click", function() {
       window.location.href = linkToOpen;
