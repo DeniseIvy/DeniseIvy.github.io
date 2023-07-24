@@ -24,3 +24,7 @@ nav{
   width: 100vw;
   margin: 0 20p;
 }
+
+.logo{
+  content: url('/media/align_borger.webp');
+}
