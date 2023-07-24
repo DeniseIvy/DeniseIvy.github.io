@@ -31,3 +31,12 @@ nav{
   content: url('/media/align_borger.webp');
   height: 30px;
 }
+
+.alink{
+  color: #FFF;
+  font-weight: 700;
+}
+
+.mr-50{
+  margin-right: 50px;
+}
