@@ -37,6 +37,10 @@ nav{
   height: 50px;
 }
 
+.logo:hover{
+  opacity: 0.75;
+}
+
 .alink{
   color: #FFF;
   font-weight: 700;
