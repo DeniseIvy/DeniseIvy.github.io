@@ -52,11 +52,20 @@ nav{
   margin-right: 50px;
 }
 
+.mt-20{
+  margin-top: 20px;
+}
+
 #title{
   display: flex;
   align-items: center;
   justify-content: center;
   height: calc(100vh - 100px);
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
 }
 
 h1{
