@@ -29,4 +29,5 @@ nav{
 
 .logo{
   content: url('/media/align_borger.webp');
+  height: 25px;
 }
