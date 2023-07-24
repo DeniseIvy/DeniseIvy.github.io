@@ -22,14 +22,14 @@ nav{
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  width: calc(100vw - 40px);
+  width: 100vw;
   padding: 0 20px;
   background-color: #2E4E74; 
 }
 
 .logo{
   content: url('/media/align_borger.webp');
-  height: 30px;
+  height: 50px;
 }
 
 .alink{
