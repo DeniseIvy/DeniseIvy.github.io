@@ -35,6 +35,7 @@ nav{
 .logo{
   content: url('/media/align_borger.webp');
   height: 50px;
+  cursor: pointer;
 }
 
 .logo:hover{
