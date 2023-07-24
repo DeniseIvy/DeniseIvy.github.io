@@ -2,6 +2,7 @@ const texts = [
     "Developer",
     "Gamer",
     "Teacher",
+    "Idol ni Naela",
   ]; 
   
   let textIndex = 0;
