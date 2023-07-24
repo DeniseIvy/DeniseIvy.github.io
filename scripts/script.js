@@ -18,7 +18,7 @@ const texts = [
       charIndex = 0;
     }
   
-    setTimeout(type, 500); 
+    setTimeout(type, 300); 
   }
   
   
