@@ -23,9 +23,9 @@ const texts = [
   }
   
   
-  document.addEventListener("DOMContentLoaded", type);
+document.addEventListener("DOMContentLoaded", type);
 
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const myButton = document.getElementById("btnCntct");
   
     const linkToOpen = "./includes/contact.html";
@@ -33,5 +33,5 @@ const texts = [
     myButton.addEventListener("click", function() {
       window.location.href = linkToOpen;
     });
-  });
+});
   
