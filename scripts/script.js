@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 var modal = document.getElementById("cancelModal");
-var myButton= document.getElementById("btnCancel");
+var btn = document.getElementById("btnCancel");
 var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
   modal.style.display = "block";
