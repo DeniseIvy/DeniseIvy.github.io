@@ -23,20 +23,20 @@ const texts = [
   }
   
   
-document.addEventListener("DOMContentLoaded", type);
+// document.addEventListener("DOMContentLoaded", type);
 
-document.addEventListener("DOMContentLoaded", function() {
-    const myButton = document.getElementById("btnCntct");
+// document.addEventListener("DOMContentLoaded", function() {
+//     const myButton = document.getElementById("btnCntct");
   
-    const linkToOpen = "./includes/contact.html";
+//     const linkToOpen = "./includes/contact.html";
   
-    myButton.addEventListener("click", function() {
-      window.location.href = linkToOpen;
-    });
-});
+//     myButton.addEventListener("click", function() {
+//       window.location.href = linkToOpen;
+//     });
+// });
 
 var modal = document.getElementById("cancelModal");
-var btn = document.getElementById("btnCancel");
+var btn  = document.getElementById("btnCancel");
 var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
   modal.style.display = "block";
