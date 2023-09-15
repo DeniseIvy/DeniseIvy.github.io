@@ -86,3 +86,25 @@
   font-family: Nunito;
   line-height: 1.167;
 }
+.paymentIBT, .paymentBT , .paymentQR {
+    display: flex;
+    border-color: rgb(228, 228, 228);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+.paymentIcon {
+  flex-basis: 50px;
+}
+.info {
+  margin-left: 12px;
+  /* display: flex; */
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.paymentInfo1 {
+  font-weight: 700;
+}
