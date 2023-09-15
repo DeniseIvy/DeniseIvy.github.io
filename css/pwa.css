@@ -16,6 +16,10 @@
     justify-content: center;
     min-height: 100vh;
   }
+  .logo { 
+    height: 100%;
+    max-height: 30px;
+  }
   .head_er {
     background: rgb(45, 87, 137);
     display: flex;
@@ -38,32 +42,37 @@
     flex-direction: column;
     flex: 1 1 0%;
     width: 100%;
-    max-width: 900px;
+    /* max-width: 900px; */
     gap: 10px;
-  }
-  .merchantHeader {
-    display: flex;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
+
     -webkit-box-align: center;
     align-items: center;
-    padding: 12px;
-    background-color: rgb(255, 255, 255);
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+  .merchantHeader {
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    height: 50px;
     width: 100%;
-    max-width: 900px;
+    justify-content: center;
+    padding: 12px;
   }
 .merchantContent {
-    /* flex: 1 1 70px;
+    flex: 1 1 70px;
     display: flex;
     justify-content: center;
-    flex-direction: column; */  
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    /* padding: 12px; */
-    width: 100%;
+    flex-direction: column; 
     max-width: 900px;
+
+}
+.paymentMethod {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  border-width: 0px;
+  background-color: rgb(249, 249, 249);
+  max-width: 900px;
+
 }
