@@ -35,8 +35,23 @@ const texts = [
 //     });
 // });
 
-var modal = document.getElementById("cancelModal");
-var btn  = document.getElementById("btnCancel");
+var cancel = document.getElementById("cancelModal");
+var btnC  = document.getElementById("btnCancel");
+var span = document.getElementsByClassName("closeBTN")[0];
+btnC.onclick = function() {
+  cancel.style.display = "block";
+}
+span.onclick = function() {
+  cancel.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modalBTN) {
+    cancel.style.display = "none";
+  }
+}
+
+var modal = document.getElementById("Youtube");
+var btn  = document.getElementById("btnYT");
 var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
   modal.style.display = "block";
@@ -49,4 +64,5 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+  
   
