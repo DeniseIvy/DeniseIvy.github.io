@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Font1', Nunito;
+    font-family: 'Nunito', sans-serif;
   }
   main {
     background-color: rgb(242, 242, 242);
@@ -56,6 +56,7 @@
     width: 100%;
     justify-content: center;
     padding: 12px;
+    font-size: 13px;
   }
 .merchantContent {
     flex: 1 1 70px;
@@ -83,7 +84,7 @@
   font-size: 1.0625rem;
   letter-spacing: -0.24px;
   color: rgb(61, 61, 61);
-  font-family: Nunito;
+  font-size: 17px;
   line-height: 1.167;
 }
 .paymentIBT, .paymentBT , .paymentQR {
@@ -99,7 +100,7 @@
   flex-basis: 50px;
 }
 .info {
-  margin-left: 12px;
+  /* margin-left: 5px; */
   /* display: flex; */
   flex-direction: row;
   -webkit-box-align: center;
@@ -107,4 +108,13 @@
 }
 .paymentInfo1 {
   font-weight: 700;
+  font-size: 16px;
+}
+.paymentInfo {
+  font-size: 13px;
+}
+.languageSwitch {
+  color: #fff;
+  padding: 12px;
+  font-size: 12px;
 }
