@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaloPay - Payment Web Application</title>
+    <link rel="icon" type="image/x-icon" href="./media/favicon.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./jquery.js"></script>
+</head>
+<link href="styles.css" rel="stylesheet"/>
+<body>
+    <div class="preloader flex-c">
+        <img src="./media/logo_cp_full.svg" alt="cp logo" style="width: 50%; max-width: 500px;"/>
+        <div class="f16 reg gray1 loading">loading CP PWA v5 mock up ...</div>
+    </div>
+    
+    <div class="wrapper1">
+
+        <div id="wrpclose" class="flex-c wrappera fix">
+            <div id="clsemodal" class="flex-c prl-12 bg-w">
+                <div class="f16 bold gray1 w100">Cancel the transaction?</div>
+                <div class="f13 reg gray1 mb-12">Your transaction will not be completed. Please confirm to cancel the transaction.</div>
+                <div class="flex-sbc w100">
+                    <div onclick="mbgfunction1()" class="btn bg-g4 gray1 bold f14 ccc flex-c">NO</div>
+                    <div id="cancel" class="btn bg-gr white bold f14 ccc flex-c">YES, CANCEL</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="modalbg" onclick="mbgfunction1()"></div>
+        <div class="whole bg-g3 rel">
+            
+                <div id="modal" class="bg-w abs">
+
+                    <div class="ibts1 abs bg-w">
+                        <div class="sp1 flex-c">
+
+                            <div class="s-pm flex-sb mt-12">
+
+                                <div class="flex">
+                                    <img class="mr-10" src="./media/icon_ibt2.svg" alt="ibt icon"/>
+                                    <div class="flex-column">
+                                        <div class="f16 gray1 bold">Instant Bank Transfer</div>
+                                        <div class="f13 gray1 reg">Payment Method</div>
+                                    </div>
+                                </div>
+
+                                <div class="btn" onclick="closeibtfunction()">
+                                    <img src="./media/icon_close.svg" alt="close btn">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="banklist">
+                            <div class="sp2 flex-column">
+                                <div class="f16 bold gray1">Payment Option</div>
+                                <div class="f13 reg gray1">Please select your bank.</div>
+                            </div>
+
+                            <div class="sp3 prl-12 flex-column">
+                                <div class="flex-sb bankwrap mb-12 w100">
+                                    <div id="b-ab" class="bitem f13 reg graycp flex-c btn mr-12"><a class="abl flex-c gray1" href="#Axis Bank">Axis Bank</a></div>
+                                    <div id="b-km" class="bitem f13 reg graycp flex-c btn"><a class="kbl flex-c gray1" href="#Kotak Mahindra">Kotak Mahindra Bank</a></div>
+                                </div>
+                                <div class="flex-sb bankwrap mb-12 w100">
+                                    <div id="b-sbi" class="bitem f13 reg graycp flex-c btn mr-12"><a class="sbl flex-c gray1" href="#SBI">SBI</a></div>
+                                    <div id="b-idbi" class="bitem f13 reg graycp flex-c btn"><a class="idbl flex-c gray1" href="#IDBI Bank">IDBI Bank</a></div>
+                                </div>
+                                <div class="flex-sb bankwrap mb-12 w100">
+                                    <div id="b-hdfc" class="bitem f13 reg graycp flex-c btn mr-12"><a class="hdbl flex-c gray1" href="#HDFC Bank">HDFC Bank</a></div>
+                                    <div id="b-pnb" class="bitem f13 reg graycp flex-c btn"><a class="pnbl flex-c gray1" href="#Punjab National Bank">Punjab National Bank</a></div>
+                                </div>
+                                <div class="flex-sb bankwrap mb-12 w100">
+                                    <div id="b-icici" class="bitem f13 reg graycp flex-c btn mr-12"><a class="icibl flex-c gray1" href="#ICICI Bank">ICICI Bank</a></div>
+                                    <div class="f13 reg graycp flex-c hidden bh"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="ibtinfo" class="banklist2 abs bg-w w100 disabled">
+                            <div class="sp2 flex-column">
+                                <div class="f16 bold gray1">Submit your information</div>
+                                <div class="f13 reg gray1">Please input the information below to proceed with the payment.</div>
+                            </div>
+
+                            <div class="sp3 prl-12 flex-column">
+
+                                <div class="flex-sb mb-15">
+                                    <div class="gray2 f13 reg">Payment Option</div>
+                                    <div class="flex-c">
+                                        <div id="selbank" class="bnkselected bold f13 gray1 mr-10">a</div>
+                                        <div id="btnchange" class="flex-c btn"><img src="./media/icon_change.svg" alt="Change item"/></div>
+                                    </div>
+                                </div>
+
+                                <div class="flex-c mb-15">
+                                    <form class="w100">
+                                        <input id="inputnah" class="w100" type="text" value="" placeholder="Name of Account Holder"/>
+                                    </form>
+                                </div>
+
+                                <div class="flex-c mb-15">
+                                    <div class="impnotes flex-column w100 bg-b">
+                                        <div class="gray1 bold f14">Important Notes</div>
+                                        <div class="gray1 reg f13">Please input the details exactly as they appear on file with your bank, payment system, or merchant&#39s website to avoid payment issues.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="upiqr1 abs bg-w">
+                        <div class="sp1 flex-c">
+
+                            <div class="s-pm flex-sb mt-12">
+
+                                <div class="flex">
+                                    <img class="mr-10" src="./media/icon_upi.svg" alt="ibt icon"/>
+                                    <div class="flex-column">
+                                        <div class="f16 gray1 bold">UPI QR</div>
+                                        <div class="f13 gray1 reg">Payment Method</div>
+                                    </div>
+                                </div>
+
+                                <div class="btn" onclick="closeibtfunction()">
+                                    <img src="./media/icon_close.svg" alt="close btn">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="">
+                            <div class="sp2 flex-column">
+                                <div class="f16 bold gray1">Payment Option</div>
+                                <div class="f13 reg gray1">Please select your eWallet.</div>
+                            </div>
+
+                            <div class="sp3 prl-12 flex-column">
+                                <div class="flex-sb bankwrap mb-12 w100">
+                                    <div id="u-gpay" class="bitem f13 reg graycp flex-c btn mr-12">GPay</div>
+                                    <div id="u-phonepe" class="bitem f13 reg graycp flex-c btn">PhonePe</div>
+                                </div>
+                                <div class="flex-sb bankwrap mb-12 w100">
+                                    <div id="u-paytm" class="bitem f13 reg graycp flex-c btn mr-12">Paytm</div>
+                                    <div id="u-bhim" class="bitem f13 reg graycp flex-c btn">BHIM</div>
+                                </div>
+                                <div class="flex-sb bankwrap mb-12 w100">
+                                    <div id="u-oth" class="bitem f13 reg graycp flex-c btn mr-12">Others</div>
+                                    <div class="bitem f13 reg graycp flex-c hidden bh"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="upiapp1 abs bg-w">
+                        <div class="sp1 flex-c">
+
+                            <div class="s-pm flex-sb mt-12">
+
+                                <div class="flex">
+                                    <img class="mr-10" src="./media/icon_upi.svg" alt="ibt icon"/>
+                                    <div class="flex-column">
+                                        <div class="f16 gray1 bold">UPI Apps</div>
+                                        <div class="f13 gray1 reg">Payment Method</div>
+                                    </div>
+                                </div>
+
+                                <div class="btn" onclick="closeibtfunction()">
+                                    <img src="./media/icon_close.svg" alt="close btn">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="">
+                            <div class="sp2 flex-column">
+                                <div class="f16 bold gray1">Payment Option</div>
+                                <div class="f13 reg gray1">Please select your preferred UPI App.</div>
+                            </div>
+
+                            <div class="sp3 prl-12 flex-column">
+                                <div class="flex-sb bankwrap mb-12 w100">
+                                    <div id="u-upi" class="bitem f13 reg graycp flex-c btn mr-12">UPI QR</div>
+                                    <div id="u-gpayqr" class="bitem f13 reg graycp flex-c btn">Google Pay QR</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+
+            
+
+            <div class="header bg-gr flex-c">
+                <img src="./media/logo_cp_white.svg" alt="chalopay logo"/>
+            </div>
+
+            <div class="pay-d bg-w shad-b mb-10">
+                <div class="item flex-c">
+                    <div class="w100">
+                        <div class="f13 gray1 bold">ABC Merchant</div>
+                        <div class="f13 gray1 reg">Order No.: rMM7xRjgiV5eNqG</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pay-m bg-w flex-c">
+
+                <div class="item">
+                    <div class="w100 wrapper3">
+
+                        <div class="f18 bold gray1 mb-10">
+                            Payment Method - INR (Indian Rupee)
+                        </div>
+
+                        <div id="ibt" class="pm-list flex btn mb-10" onclick="ibtfunction1()">
+                            <img class="mr-10" src="./media/icon_ibt.svg" alt="ibt icon"/>
+                            <div class="flex-column">
+                                <div class="f16 bold gray1">Instant Bank Transfer</div>
+                                <div class="f13 reg gray1">Transfer funds securely via internet banking</div>
+                                <div class="f10 reg gray2">Kotak, HDFC Bank, ICICI Bank + more options</div>
+                            </div>
+                        </div>
+
+                        <div id="upiqr" class="pm-list flex btn mb-10" onclick="upifunction1()">
+                            <img class="mr-10" src="./media/icon_upi.svg" alt="upi icon"/>
+                            <div class="flex-column">
+                                <div class="f16 bold gray1">UPI QR</div>
+                                <div class="f13 reg gray1">Scan the QR code via UPI apps</div>
+                                <div class="f10 reg gray2">PhonePe, Google Pay, Paytm + more options</div>
+                            </div>
+                        </div>
+
+                        <div id="upiapp" class="pm-list flex btn" onclick="upifunction2()">
+                            <img class="mr-10" src="./media/icon_upi.svg" alt="upi icon"/>
+                            <div class="flex-column">
+                                <div class="f16 bold gray1">UPI Apps</div>
+                                <div class="f13 reg gray1">Open the UPI app and verify the payment</div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="amt" class="amount abs shad-t bg-w flex-c">
+                <div class="flex-sbc w100 wrapper2">
+                    <div class="flex-column">
+                        <div class="gray2 f13 reg">Amount (&#8377;)</div>
+                        <div class="gray1 f18 bold">1,000.00</div>
+                    </div>
+                    <div class="flex-c">
+                        <div class="submit mr-5 btn">
+                            <form id="fsbmt1" onsubmit="return false">
+                                <button id="sbmt" class="enabled" type="submit" value="Submit" disabled>SUBMIT</button>
+                            </form>
+                            <button id="absbmt" class="disabled" type="submit" value="Submit">SUBMIT</button>
+                            <button id="kmsbmt" class="disabled" type="submit" value="Submit">SUBMIT</button>
+                            <button id="sbsbmt" class="disabled" type="submit" value="Submit">SUBMIT</button>
+                            <button id="idsbmt" class="disabled" type="submit" value="Submit">SUBMIT</button>
+                            <button id="hdsbmt" class="disabled" type="submit" value="Submit">SUBMIT</button>
+                            <button id="pnsbmt" class="disabled" type="submit" value="Submit">SUBMIT</button>
+                            <button id="icsbmt" class="disabled" type="submit" value="Submit">SUBMIT</button>
+                        </div>
+                        <div id="cbtn" class="btn"><img src="./media/icon_close.svg" alt=""/></div> 
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaloPay - Payment Web Application</title>
+    <link rel="icon" type="image/x-icon" href="./media/favicon.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./jquery.js"></script>
+    <script type="text/javascript" src="./captcha.js"></script>
+</head>
+<link href="style.css" rel="stylesheet"/>
+<body onload="generateCaptcha()">
+    <div class="wrapper1">
+
+        <div id="modalcancel" class="flex-c bg-w fix">
+            <div class="mc-cnt flex-column">
+                <div class="f16 gray1 bold mb-5">Cancel the Transaction?</div>
+                <div class="f13 gray1 reg mb-12">Your transaction will not be completed. Please tell us why you are cancelling the transaction.</div>
+                <input type="text" class="mssg" placeholder="Cancellation reason"/>
+            </div>
+        </div>
+        <div id="modalbg" class="flex-c" onclick="mbgfunction1()"></div>
+        
+        <div class="rel wrapper4">
+            <div class="whole bg-g3 rel">        
+
+                    <div class="header bg-gr flex-c">
+                        <img src="./media/logo_cp_white.svg" alt="chalopay logo"/>
+                    </div>
+
+                    <div class="scr-det bg-w flex-sbc mb-10 shad-b">
+                        <div class="scr-txt f13 gray1 flex-column">
+                            <div class="bold">ABC Merchant</div>
+                            <div class="reg">Ref No.: TST-123456789012y</div>
+                        </div>
+                        <div class="amnt gray1 flex-c">
+                            <div class="f12 reg symbol mr-5">&#8377;</div>
+                            <div class="f18 bold value">1,000.00</div>
+                        </div>
+                    </div>
+
+                    <div class="login bg-w flex-c mb-10">
+
+                        <div class="bnklogin w100 flex-sbc mb-15">
+                            <div class="gray2 f13 reg">Internet Banking</div>
+                            <div class="gray1 f18 bold pb-9">HDFC Bank</div>
+                        </div>
+
+                        <div class="logform flex-column prl-12 mb-20">
+                            <div class="bold gray1 f16">Log in with HDFC Bank</div>
+                            <div class="reg gray1 f13">Log in with your internet baking account to authorize the payment.</div>
+                        </div>
+
+                        <div class="bform flex-column prl-12">
+                            <input id="user" class="mb-10" type="text" placeholder="Username"/>
+                            <input id="pass" class="mb-10" type="password" placeholder="Password"/>
+                            <div class="flex-sb mb-10">
+                                <input id="txtInput" class="mr-10" type="text" placeholder="Captcha"/>
+                                <div class="flex-c">
+                                    <input class="mr-10 captcha bold" type="text" id="mainCaptcha" readonly="readonly"/>
+                                    <div class="btn" onclick="generateCaptcha()">
+                                        <img src="./media/icon_refresh.svg" alt="refresh captcha">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-10 gray1 f10 reg">Type the text shown in the image (captcha code is case sensitive).</div>
+                        </div>
+
+                        <div class="loginbtn flex-column prl-12">
+                            <button id="log" class="loginsbmt mb-10 btn" type="submit">LOGIN</button>
+                            <button id="cncl" class="cancelsbmt btn" type="submit">CANCEL</button>
+                        </div>
+
+                    </div>
+
+                    <div class="bg-w flex-column sec-con">
+                        <div class="f16 gray1 bold w100 mb-10">Secure Connection</div>
+
+                        <div class="flex mb-15">
+                            <div class="icoon mr-5"><img src="./media/icon_lock.svg" alt=""/></div>
+                            <div class="flex-column mt-4">
+                                <div class="bold f13 gray1">Your information is protected</div>
+                                <div class="reg f13 gray1">The safety and security of your information are protected. None of your credentials are stored. We will not share any of your account information (including personal data) with any third party.</div>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="icoon mr-5"><img src="./media/icon_check.svg" alt=""/></div>
+                            <div class="flex-column mt-4">
+                                <div class="bold f13 gray1">Your payment verification is secure</div>
+                                <div class="reg f13 gray1">When deemed necessary, it may require additional verification, such as, but not limited to, sending a One-Time Password (OTP) via SMS to your registered mobile number before effecting your account transaction.</div>
+                            </div>
+                        </div>
+                
+                
+                    </div>
+            </div>
+        </div>
+
+        <div class="abs pptfooter flex-sbc prl-12 bg-w">
+            <div class="flex-column">
+                <div class="f13 gray2 reg">Powered by</div>
+                <div class="logooo"><img src="./media/logo_cp_full.svg" alt="ChaloPay logo"/></div>
+            </div>
+        </div>  
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
